@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feminine Glow | متجر الأظافر </title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Marcellus&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cart-overlay" onclick="toggleCart()"></div>
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h3>سلة التسوق</h3>
+            <i class="fas fa-times close-cart" onclick="toggleCart()"></i>
+        </div>
+        <div class="cart-items" id="cart-list">
+        </div>
+        <div class="cart-total">
+            <span>المجموع:</span>
+            <span id="total-price">0 ريال</span>
+        </div>
+        <button class="checkout-btn">إتمام الطلب</button>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Feminine Glow Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#about-us">من نحن</a></li>
+                <li><a href="#nails-ready">أظافر جاهزة</a></li>
+                <li><a href="#nail-polish">طلاء أظافر</a></li>
+                <li><a href="#nail-care">عناية بالأظافر</a></li>
+                <li><a href="#booking">حجز مواعيد</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count" id="count-display">0</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>دللي أظافركِ<br>بلمسة مخملية</h1>
+            <p>مجموعات مختارة بعناية لتناسب ذوقكِ الرفيع.</p>
+        </div>
+    </section>
+
+    <section id="about-us" class="section-padding">
+        <div class="about-container">
+            <div class="about-image-wrapper">
+                <img src="h.png" alt="Feminine Glow Art">
+            </div>
+            <div class="about-text-content">
+                <h3><i class="fas fa-magic"></i> قصة Feminine Glow</h3>
+                <p>نحن نؤمن بأن كل امرأة تستحق أن تشع بجمالها الخاص. في <strong>Feminine Glow</strong>، دمجنا بين فن طلاء الأظافر وأحدث تقنيات العناية لنقدم لكِ تجربة تفوق التوقعات.</p>
+                <p>نهدف إلى منحكِ لمسة من الأناقة اليومية التي تعزز ثقتكِ وتبرز أنوثتكِ، مع الالتزام التام بجودة المنتجات وسلامة أظافركِ.</p>
+                <a href="#booking" class="cta-btn">تصفحي تجربة الدلال الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="nails-ready">
+        <div class="section-title"><h2>أظافر جاهزة</h2></div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="hand2.png" alt="أظافر وردية">
+                <div class="product-info">
+                    <h3>أظافر وردية ناعمة</h3>
+                    <span class="price">50 ريال</span>
+                    <button class="add-btn" onclick="addToCart('أظافر وردية ناعمة', 50)">أضف للسلة</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="hand3.png" alt="أظافر فرنش">
+                <div class="product-info">
+                    <h3>أظافر فرنش كلاسيك</h3>
+                    <span class="price">55 ريال</span>
+                    <button class="add-btn" onclick="addToCart('أظافر فرنش كلاسيك', 55)">أضف للسلة</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="hand1.png" alt="أظافر نود">
+                <div class="product-info">
+                    <h3>أظافر بيجي لود</h3>
+                    <span class="price">50 ريال</span>
+                    <button class="add-btn" onclick="addToCart('أظافر بيجي لود', 50)">أضف للسلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="nail-polish" style="background-color: #fafafa;">
+        <div class="section-title"><h2>مجموعات طلاء الأظافر</h2></div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="m1.png" alt="طلاء أحمر">
+                <div class="product-info">
+                    <h3>طلاء أحمر ملكي</h3>
+                    <span class="price">90 ريال</span>
+                    <button class="add-btn" onclick="addToCart('طلاء أحمر ملكي', 90)">أضف للسلة</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="m2.png" alt="طلاء وردي">
+                <div class="product-info">
+                    <h3>طلاء بيبي بينك</h3>
+                    <span class="price">95 ريال</span>
+                    <button class="add-btn" onclick="addToCart('طلاء بيبي بينك', 95)">أضف للسلة</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="m3.png" alt="طلاء بنفسجي">
+                <div class="product-info">
+                    <h3>طلاء بنفسجي باستيل</h3>
+                    <span class="price">90 ريال</span>
+                    <button class="add-btn" onclick="addToCart('طلاء بنفسجي باستيل', 90)">أضف للسلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" id="nail-care">
+        <div class="section-title"><h2>عناية بالأظافر</h2></div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="زيت.png" alt="زيت عناية">
+                <div class="product-info">
+                    <h3>زيت تقوية الأظافر</h3>
+                    <span class="price">45 ريال</span>
+                    <button class="add-btn" onclick="addToCart('زيت تقوية الأظافر', 45)">أضف للسلة</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="سيروم.png" alt="سيروم ترطيب">
+                <div class="product-info">
+                    <h3>سيروم ترطيب</h3>
+                    <span class="price">60 ريال</span>
+                    <button class="add-btn" onclick="addToCart('سيروم ترطيب', 60)">أضف للسلة</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="ادوات.png" alt="أدوات مانيكير">
+                <div class="product-info">
+                    <h3>أدوات عناية احترافية</h3>
+                    <span class="price">80 ريال</span>
+                    <button class="add-btn" onclick="addToCart('أدوات عناية احترافية', 80)">أضف للسلة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section section-padding" id="booking">
+        <div class="section-title"><h2>حجز موعد</h2></div>
+        <div class="booking-container">
+            <form id="booking-form">
+                <div class="services-grid">
+                    <label class="service-item"><input type="checkbox"> إزالة جل</label>
+                    <label class="service-item"><input type="checkbox"> تجديد أظافر</label>
+                    <label class="service-item"><input type="checkbox"> باديكير</label>
+                    <label class="service-item"><input type="checkbox"> مانيكير</label>
+                </div>
+                <div class="booking-inputs">
+                    <input type="date">
+                    <select>
+                        <option>اختر الوقت</option>
+                        <option>10:00 ص</option>
+                        <option>12:00 م</option>
+                        <option>02:00 م</option>
+                        <option>04:00 م</option>
+                    </select>
+                </div>
+                <button type="button" class="confirm-booking-btn">تأكيد الحجز</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-info-section" id="contact">
+        <div class="section-title"><h2>تواصل معنا</h2></div>
+        <div class="contact-container">
+            <a href="#" class="contact-item"><i class="fab fa-instagram"></i><span>@FeminineGlow</span></a>
+            <a href="#" class="contact-item"><i class="fab fa-whatsapp"></i><span>+966 50 000 0000</span></a>
+            <a href="#" class="contact-item"><i class="far fa-envelope"></i><span>info@feminineglow.com</span></a>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2026 متجر فيمينين جلو - Feminine Glow | جميع الحقوق محفوظة</p>
+    </footer>
+
+    <!-- سكربت التحكم في السلة -->
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function toggleCart() {
+            document.getElementById('cart-sidebar').classList.toggle('active');
+            document.querySelector('.cart-overlay').classList.toggle('active');
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            total += price;
+            updateUI();
+            
+            // فتح السلة تلقائياً للتنبيه
+            if(!document.getElementById('cart-sidebar').classList.contains('active')) {
+                toggleCart();
+            }
+        }
+
+        function updateUI() {
+            const list = document.getElementById('cart-list');
+            const countDisplay = document.getElementById('count-display');
+            const totalPriceDisplay = document.getElementById('total-price');
+
+            list.innerHTML = "";
+            cart.forEach(item => {
+                list.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.name}</span>
+                        <span>${item.price} ريال</span>
+                    </div>
+                `;
+            });
+
+            countDisplay.innerText = cart.length;
+            totalPriceDisplay.innerText = total + " ريال";
+        }
+    </script>
+</body>
+</html>
